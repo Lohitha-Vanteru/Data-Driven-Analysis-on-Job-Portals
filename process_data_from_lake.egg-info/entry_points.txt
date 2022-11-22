@@ -1,0 +1,2 @@
+[console_scripts]
+process-data-from-lake = data_lake.process_data:main

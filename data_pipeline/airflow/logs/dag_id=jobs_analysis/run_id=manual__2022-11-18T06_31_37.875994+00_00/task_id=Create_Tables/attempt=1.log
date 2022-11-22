@@ -1,0 +1,89 @@
+[2022-11-18T06:32:44.534+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:31:37.875994+00:00 [queued]>
+[2022-11-18T06:32:44.539+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:31:37.875994+00:00 [queued]>
+[2022-11-18T06:32:44.539+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-18T06:32:44.539+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 4
+[2022-11-18T06:32:44.539+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-18T06:32:44.550+0000] {taskinstance.py:1383} INFO - Executing <Task(PostgresOperator): Create_Tables> on 2022-11-18 06:31:37.875994+00:00
+[2022-11-18T06:32:44.553+0000] {standard_task_runner.py:55} INFO - Started process 8228 to run task
+[2022-11-18T06:32:44.556+0000] {standard_task_runner.py:82} INFO - Running: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:31:37.875994+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/jobs_dag.py', '--cfg-path', '/tmp/tmpfuhw5lbc']
+[2022-11-18T06:32:44.557+0000] {standard_task_runner.py:83} INFO - Job 18: Subtask Create_Tables
+[2022-11-18T06:32:44.589+0000] {task_command.py:376} INFO - Running <TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:31:37.875994+00:00 [running]> on host ip-172-31-2-28.us-west-1.compute.internal
+[2022-11-18T06:32:44.623+0000] {taskinstance.py:1590} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=lohitha.vanteru@sjsu.edu
+AIRFLOW_CTX_DAG_OWNER=Theinsightco
+AIRFLOW_CTX_DAG_ID=jobs_analysis
+AIRFLOW_CTX_TASK_ID=Create_Tables
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-18T06:31:37.875994+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-18T06:31:37.875994+00:00
+[2022-11-18T06:32:44.627+0000] {base.py:71} INFO - Using connection ID 'redshift_tci' for task execution.
+[2022-11-18T06:32:44.655+0000] {sql.py:315} INFO - Running statement: DROP TABLE IF EXISTS jobs;
+DROP TABLE IF EXISTS company_location;
+DROP TABLE IF EXISTS job_rating;
+DROP TABLE IF EXISTS job_sector;
+DROP TABLE IF EXISTS job_salary;
+DROP TABLE IF EXISTS employees;
+
+
+
+CREATE TABLE IF NOT EXISTS jobs (
+	job_title varchar (500) NOT NULL,
+	job_description varchar(max),
+	company varchar,
+	location varchar(max),
+	source varchar(256)
+);
+
+
+CREATE TABLE IF NOT EXISTS company_location (
+	company varchar NOT NULL,
+	location varchar(max),
+	city varchar(256),
+	state varchar(256),
+	country varchar(256)
+);
+
+
+CREATE TABLE IF NOT EXISTS job_rating (
+	job_title varchar (500) NOT NULL,
+	company varchar,
+	rating float,
+	max_rating int
+);
+
+
+CREATE TABLE IF NOT EXISTS job_sector (
+	job_title varchar (500) NOT NULL,
+	sector varchar(max)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS job_salary (
+	job_title varchar (500) NOT NULL,
+	company varchar,
+	estimated_salary varchar (256)
+);
+
+
+CREATE TABLE IF NOT EXISTS employees (
+	person_id int NOT NULL,
+	hobby varchar(256),
+	open_source_contrib varchar(256),
+	country varchar(256),
+	student varchar(256),
+	employment varchar(256),
+	main_education varchar(256),
+	development_area varchar(max),
+	latest_job varchar,
+	productive_hours varchar,
+	gender varchar(256),
+	age varchar(256)
+);, parameters: None
+[2022-11-18T06:32:44.714+0000] {postgres.py:96} INFO - INFO:  Table "company_location" does not exist and will be skipped
+
+[2022-11-18T06:32:44.718+0000] {taskinstance.py:1401} INFO - Marking task as SUCCESS. dag_id=jobs_analysis, task_id=Create_Tables, execution_date=20221118T063137, start_date=20221118T063244, end_date=20221118T063244
+[2022-11-18T06:32:44.767+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2022-11-18T06:32:44.788+0000] {local_task_job.py:273} INFO - 6 downstream tasks scheduled from follow-on schedule check

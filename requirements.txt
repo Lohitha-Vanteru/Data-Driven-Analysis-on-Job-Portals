@@ -1,0 +1,3 @@
+process-data-from-lake @ file:///home/ubuntu/theinsightco_project
+process-data-from-lakee @ file:///home/ubuntu/theinsightco_project
+process-data-from-lakes @ file:///home/ubuntu/theinsightco_project

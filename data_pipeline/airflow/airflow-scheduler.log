@@ -1,0 +1,307 @@
+2022-11-18 06:02:39,690 INFO - Starting the scheduler
+2022-11-18 06:02:39,690 INFO - Processing each file at most -1 times
+2022-11-18 06:02:39,694 INFO - Loaded executor: SequentialExecutor
+2022-11-18 06:02:39,699 INFO - Launched DagFileProcessorManager with pid: 3781
+2022-11-18 06:02:39,701 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:02:39,703 INFO - Configured default timezone Timezone('UTC')
+2022-11-18 06:07:39,886 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:11:11,068 INFO - Setting next_dagrun for jobs_analysis to 2022-11-17T00:00:00+00:00, run_after=2022-11-18T00:00:00+00:00
+2022-11-18 06:11:11,453 INFO - Setting next_dagrun for jobs_analysis to 2022-11-18T00:00:00+00:00, run_after=2022-11-19T00:00:00+00:00
+2022-11-18 06:11:11,496 INFO - 2 tasks up for execution:
+	<TaskInstance: jobs_analysis.Process_Data_Lake scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Process_Data_Lake manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:11:11,497 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:11:11,497 INFO - DAG jobs_analysis has 1/16 running and queued tasks
+2022-11-18 06:11:11,497 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Process_Data_Lake scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Process_Data_Lake manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:11:11,498 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Process_Data_Lake', run_id='scheduled__2022-11-16T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 11 and queue default
+2022-11-18 06:11:11,498 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:11:11,499 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Process_Data_Lake', run_id='manual__2022-11-18T06:11:10.201511+00:00', try_number=1, map_index=-1) to executor with priority 11 and queue default
+2022-11-18 06:11:11,499 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:11:11,503 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:12:21,290 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:13:25,435 INFO - Executor reports execution of jobs_analysis.Process_Data_Lake run_id=scheduled__2022-11-16T00:00:00+00:00 exited with status success for try_number 1
+2022-11-18 06:13:25,436 INFO - Executor reports execution of jobs_analysis.Process_Data_Lake run_id=manual__2022-11-18T06:11:10.201511+00:00 exited with status success for try_number 1
+2022-11-18 06:13:25,441 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Process_Data_Lake, run_id=manual__2022-11-18T06:11:10.201511+00:00, map_index=-1, run_start_date=2022-11-18 06:12:22.577784+00:00, run_end_date=2022-11-18 06:13:25.126015+00:00, run_duration=62.548231, state=success, executor_state=success, try_number=1, max_tries=3, job_id=3, pool=default_pool, queue=default, priority_weight=11, operator=BashOperator, queued_dttm=2022-11-18 06:11:11.497520+00:00, queued_by_job_id=1, pid=5801
+2022-11-18 06:13:25,442 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Process_Data_Lake, run_id=scheduled__2022-11-16T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:11:12.789710+00:00, run_end_date=2022-11-18 06:12:20.975649+00:00, run_duration=68.185939, state=success, executor_state=success, try_number=1, max_tries=3, job_id=2, pool=default_pool, queue=default, priority_weight=11, operator=BashOperator, queued_dttm=2022-11-18 06:11:11.497520+00:00, queued_by_job_id=1, pid=5362
+2022-11-18 06:13:25,452 ERROR - DagFileProcessorManager (PID=3781) last sent a heartbeat 134.01 seconds ago! Restarting it
+2022-11-18 06:13:25,455 INFO - Sending Signals.SIGTERM to group 3781. PIDs of all processes in the group: [3781]
+2022-11-18 06:13:25,455 INFO - Sending the signal Signals.SIGTERM to group 3781
+2022-11-18 06:13:25,587 INFO - Process psutil.Process(pid=3781, status='terminated', exitcode=0, started='06:02:39') (3781) terminated with exit code 0
+2022-11-18 06:13:25,591 INFO - Launched DagFileProcessorManager with pid: 6239
+2022-11-18 06:13:25,595 INFO - Configured default timezone Timezone('UTC')
+2022-11-18 06:13:25,617 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:13:25,619 INFO - Marked 1 SchedulerJob instances as failed
+2022-11-18 06:13:25,792 INFO - 3 tasks up for execution:
+	<TaskInstance: jobs_analysis.Process_Data_Lake scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:13:25,792 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:13:25,792 INFO - DAG jobs_analysis has 1/16 running and queued tasks
+2022-11-18 06:13:25,792 INFO - DAG jobs_analysis has 2/16 running and queued tasks
+2022-11-18 06:13:25,792 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Process_Data_Lake scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:13:25,794 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Process_Data_Lake', run_id='scheduled__2022-11-17T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 11 and queue default
+2022-11-18 06:13:25,794 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:13:25,794 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-16T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:13:25,794 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:13:25,794 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='manual__2022-11-18T06:11:10.201511+00:00', try_number=1, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:13:25,794 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:13:25,798 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:14:30,686 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:14:32,431 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:14:34,128 INFO - Executor reports execution of jobs_analysis.Process_Data_Lake run_id=scheduled__2022-11-17T00:00:00+00:00 exited with status success for try_number 1
+2022-11-18 06:14:34,128 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-16T00:00:00+00:00 exited with status success for try_number 1
+2022-11-18 06:14:34,128 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=manual__2022-11-18T06:11:10.201511+00:00 exited with status success for try_number 1
+2022-11-18 06:14:34,135 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=manual__2022-11-18T06:11:10.201511+00:00, map_index=-1, run_start_date=2022-11-18 06:14:33.725913+00:00, run_end_date=2022-11-18 06:14:33.820706+00:00, run_duration=0.094793, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=6, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:13:25.793075+00:00, queued_by_job_id=1, pid=6683
+2022-11-18 06:14:34,135 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-16T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:14:31.982777+00:00, run_end_date=2022-11-18 06:14:32.083500+00:00, run_duration=0.100723, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=5, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:13:25.793075+00:00, queued_by_job_id=1, pid=6681
+2022-11-18 06:14:34,135 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Process_Data_Lake, run_id=scheduled__2022-11-17T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:13:27.090997+00:00, run_end_date=2022-11-18 06:14:30.344953+00:00, run_duration=63.253956, state=success, executor_state=success, try_number=1, max_tries=3, job_id=4, pool=default_pool, queue=default, priority_weight=11, operator=BashOperator, queued_dttm=2022-11-18 06:13:25.793075+00:00, queued_by_job_id=1, pid=6242
+2022-11-18 06:14:34,145 ERROR - DagFileProcessorManager (PID=6239) last sent a heartbeat 68.39 seconds ago! Restarting it
+2022-11-18 06:14:34,148 INFO - Sending Signals.SIGTERM to group 6239. PIDs of all processes in the group: [6239]
+2022-11-18 06:14:34,148 INFO - Sending the signal Signals.SIGTERM to group 6239
+2022-11-18 06:14:34,280 INFO - Process psutil.Process(pid=6239, status='terminated', exitcode=0, started='06:13:25') (6239) terminated with exit code 0
+2022-11-18 06:14:34,284 INFO - Launched DagFileProcessorManager with pid: 6684
+2022-11-18 06:14:34,289 INFO - Configured default timezone Timezone('UTC')
+2022-11-18 06:14:34,485 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:14:34,486 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:14:34,486 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:14:34,487 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-17T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:14:34,487 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:14:34,491 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:14:36,224 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-17T00:00:00+00:00 exited with status success for try_number 1
+2022-11-18 06:14:36,230 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-17T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:14:35.789509+00:00, run_end_date=2022-11-18 06:14:35.889424+00:00, run_duration=0.099915, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=7, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:14:34.486349+00:00, queued_by_job_id=1, pid=6687
+2022-11-18 06:18:25,779 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:19:33,032 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+2022-11-18 06:19:33,032 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:19:33,032 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+2022-11-18 06:19:33,033 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-16T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:19:33,033 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:19:33,038 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:19:34,729 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-16T00:00:00+00:00 exited with status success for try_number 2
+2022-11-18 06:19:34,732 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-16T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:19:34.336566+00:00, run_end_date=2022-11-18 06:19:34.431545+00:00, run_duration=0.094979, state=up_for_retry, executor_state=success, try_number=2, max_tries=3, job_id=8, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:19:33.032827+00:00, queued_by_job_id=1, pid=7004
+2022-11-18 06:19:34,913 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:19:34,913 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:19:34,913 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:19:34,914 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='manual__2022-11-18T06:11:10.201511+00:00', try_number=2, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:19:34,914 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:19:34,919 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:19:36,605 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=manual__2022-11-18T06:11:10.201511+00:00 exited with status success for try_number 2
+2022-11-18 06:19:36,608 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=manual__2022-11-18T06:11:10.201511+00:00, map_index=-1, run_start_date=2022-11-18 06:19:36.207719+00:00, run_end_date=2022-11-18 06:19:36.300871+00:00, run_duration=0.093152, state=up_for_retry, executor_state=success, try_number=2, max_tries=3, job_id=9, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:19:34.913704+00:00, queued_by_job_id=1, pid=7007
+2022-11-18 06:19:36,768 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:19:36,769 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:19:36,769 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:19:36,770 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-17T00:00:00+00:00', try_number=2, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:19:36,770 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:19:36,773 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:19:38,491 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-17T00:00:00+00:00 exited with status success for try_number 2
+2022-11-18 06:19:38,494 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-17T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:19:38.084295+00:00, run_end_date=2022-11-18 06:19:38.179801+00:00, run_duration=0.095506, state=up_for_retry, executor_state=success, try_number=2, max_tries=3, job_id=10, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:19:36.769487+00:00, queued_by_job_id=1, pid=7010
+2022-11-18 06:23:25,937 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:24:35,079 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+2022-11-18 06:24:35,080 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:24:35,080 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+2022-11-18 06:24:35,081 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-16T00:00:00+00:00', try_number=3, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:24:35,081 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:24:35,085 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:24:36,756 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-16T00:00:00+00:00 exited with status success for try_number 3
+2022-11-18 06:24:36,759 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-16T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:24:36.371571+00:00, run_end_date=2022-11-18 06:24:36.465046+00:00, run_duration=0.093475, state=up_for_retry, executor_state=success, try_number=3, max_tries=3, job_id=11, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:24:35.080444+00:00, queued_by_job_id=1, pid=7325
+2022-11-18 06:24:36,916 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:24:36,916 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:24:36,916 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:24:36,917 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='manual__2022-11-18T06:11:10.201511+00:00', try_number=3, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:24:36,917 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:24:36,921 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:24:38,606 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=manual__2022-11-18T06:11:10.201511+00:00 exited with status success for try_number 3
+2022-11-18 06:24:38,609 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=manual__2022-11-18T06:11:10.201511+00:00, map_index=-1, run_start_date=2022-11-18 06:24:38.207089+00:00, run_end_date=2022-11-18 06:24:38.299292+00:00, run_duration=0.092203, state=up_for_retry, executor_state=success, try_number=3, max_tries=3, job_id=12, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:24:36.916801+00:00, queued_by_job_id=1, pid=7328
+2022-11-18 06:24:38,767 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:24:38,768 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:24:38,768 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:24:38,769 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-17T00:00:00+00:00', try_number=3, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:24:38,769 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:24:38,773 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:24:40,444 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-17T00:00:00+00:00 exited with status success for try_number 3
+2022-11-18 06:24:40,447 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-17T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:24:40.059780+00:00, run_end_date=2022-11-18 06:24:40.154762+00:00, run_duration=0.094982, state=up_for_retry, executor_state=success, try_number=3, max_tries=3, job_id=13, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:24:38.768448+00:00, queued_by_job_id=1, pid=7331
+2022-11-18 06:28:26,095 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:29:36,581 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+2022-11-18 06:29:36,581 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:29:36,581 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-16T00:00:00+00:00 [scheduled]>
+2022-11-18 06:29:36,582 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-16T00:00:00+00:00', try_number=4, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:29:36,583 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:29:36,586 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-16T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:29:38,352 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-16T00:00:00+00:00 exited with status success for try_number 4
+2022-11-18 06:29:38,356 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-16T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:29:37.887098+00:00, run_end_date=2022-11-18 06:29:37.983660+00:00, run_duration=0.096562, state=failed, executor_state=success, try_number=4, max_tries=3, job_id=14, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:29:36.582145+00:00, queued_by_job_id=1, pid=7655
+2022-11-18 06:29:38,517 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:29:38,517 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:29:38,517 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:11:10.201511+00:00 [scheduled]>
+2022-11-18 06:29:38,518 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='manual__2022-11-18T06:11:10.201511+00:00', try_number=4, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:29:38,518 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:29:38,522 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:11:10.201511+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:29:40,283 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=manual__2022-11-18T06:11:10.201511+00:00 exited with status success for try_number 4
+2022-11-18 06:29:40,286 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=manual__2022-11-18T06:11:10.201511+00:00, map_index=-1, run_start_date=2022-11-18 06:29:39.843723+00:00, run_end_date=2022-11-18 06:29:39.937715+00:00, run_duration=0.093992, state=failed, executor_state=success, try_number=4, max_tries=3, job_id=15, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:29:38.517925+00:00, queued_by_job_id=1, pid=7658
+2022-11-18 06:29:40,454 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:29:40,454 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:29:40,454 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables scheduled__2022-11-17T00:00:00+00:00 [scheduled]>
+2022-11-18 06:29:40,455 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='scheduled__2022-11-17T00:00:00+00:00', try_number=4, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:29:40,455 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:29:40,459 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'scheduled__2022-11-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:29:42,183 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=scheduled__2022-11-17T00:00:00+00:00 exited with status success for try_number 4
+2022-11-18 06:29:42,186 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=scheduled__2022-11-17T00:00:00+00:00, map_index=-1, run_start_date=2022-11-18 06:29:41.744190+00:00, run_end_date=2022-11-18 06:29:41.839097+00:00, run_duration=0.094907, state=failed, executor_state=success, try_number=4, max_tries=3, job_id=16, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:29:40.454635+00:00, queued_by_job_id=1, pid=7661
+2022-11-18 06:29:42,325 ERROR - Marking run <DagRun jobs_analysis @ 2022-11-16 00:00:00+00:00: scheduled__2022-11-16T00:00:00+00:00, state:running, queued_at: 2022-11-18 06:11:11.060814+00:00. externally triggered: False> failed
+2022-11-18 06:29:42,325 INFO - DagRun Finished: dag_id=jobs_analysis, execution_date=2022-11-16 00:00:00+00:00, run_id=scheduled__2022-11-16T00:00:00+00:00, run_start_date=2022-11-18 06:11:11.078497+00:00, run_end_date=2022-11-18 06:29:42.325932+00:00, run_duration=1111.247435, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2022-11-16 00:00:00+00:00, data_interval_end=2022-11-17 00:00:00+00:00, dag_hash=cbfff67dd3f678f0f60cc0ccbd48dc90
+2022-11-18 06:29:42,330 INFO - Setting next_dagrun for jobs_analysis to 2022-11-17T00:00:00+00:00, run_after=2022-11-18T00:00:00+00:00
+2022-11-18 06:29:43,470 INFO - Setting next_dagrun for jobs_analysis to 2022-11-18T00:00:00+00:00, run_after=2022-11-19T00:00:00+00:00
+2022-11-18 06:29:43,488 ERROR - Marking run <DagRun jobs_analysis @ 2022-11-18 06:11:10.201511+00:00: manual__2022-11-18T06:11:10.201511+00:00, state:running, queued_at: 2022-11-18 06:11:10.216935+00:00. externally triggered: True> failed
+2022-11-18 06:29:43,488 INFO - DagRun Finished: dag_id=jobs_analysis, execution_date=2022-11-18 06:11:10.201511+00:00, run_id=manual__2022-11-18T06:11:10.201511+00:00, run_start_date=2022-11-18 06:11:11.078630+00:00, run_end_date=2022-11-18 06:29:43.488499+00:00, run_duration=1112.409869, state=failed, external_trigger=True, run_type=manual, data_interval_start=2022-11-17 00:00:00+00:00, data_interval_end=2022-11-18 00:00:00+00:00, dag_hash=cbfff67dd3f678f0f60cc0ccbd48dc90
+2022-11-18 06:29:43,491 INFO - Setting next_dagrun for jobs_analysis to 2022-11-18T00:00:00+00:00, run_after=2022-11-19T00:00:00+00:00
+2022-11-18 06:29:44,639 ERROR - Marking run <DagRun jobs_analysis @ 2022-11-17 00:00:00+00:00: scheduled__2022-11-17T00:00:00+00:00, state:running, queued_at: 2022-11-18 06:11:11.450280+00:00. externally triggered: False> failed
+2022-11-18 06:29:44,639 INFO - DagRun Finished: dag_id=jobs_analysis, execution_date=2022-11-17 00:00:00+00:00, run_id=scheduled__2022-11-17T00:00:00+00:00, run_start_date=2022-11-18 06:11:11.462604+00:00, run_end_date=2022-11-18 06:29:44.639356+00:00, run_duration=1113.176752, state=failed, external_trigger=False, run_type=scheduled, data_interval_start=2022-11-17 00:00:00+00:00, data_interval_end=2022-11-18 00:00:00+00:00, dag_hash=cbfff67dd3f678f0f60cc0ccbd48dc90
+2022-11-18 06:29:44,641 INFO - Setting next_dagrun for jobs_analysis to 2022-11-18T00:00:00+00:00, run_after=2022-11-19T00:00:00+00:00
+2022-11-18 06:31:39,634 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Process_Data_Lake manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:31:39,634 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:31:39,634 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Process_Data_Lake manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:31:39,635 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Process_Data_Lake', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 11 and queue default
+2022-11-18 06:31:39,635 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:31:39,640 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Process_Data_Lake', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:42,891 INFO - Executor reports execution of jobs_analysis.Process_Data_Lake run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:32:42,895 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Process_Data_Lake, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:31:40.935091+00:00, run_end_date=2022-11-18 06:32:42.556039+00:00, run_duration=61.620948, state=success, executor_state=success, try_number=1, max_tries=3, job_id=17, pool=default_pool, queue=default, priority_weight=11, operator=BashOperator, queued_dttm=2022-11-18 06:31:39.634852+00:00, queued_by_job_id=1, pid=7787
+2022-11-18 06:32:42,906 ERROR - DagFileProcessorManager (PID=6684) last sent a heartbeat 63.30 seconds ago! Restarting it
+2022-11-18 06:32:42,908 INFO - Sending Signals.SIGTERM to group 6684. PIDs of all processes in the group: [6684]
+2022-11-18 06:32:42,908 INFO - Sending the signal Signals.SIGTERM to group 6684
+2022-11-18 06:32:43,040 INFO - Process psutil.Process(pid=6684, status='terminated', exitcode=0, started='06:14:33') (6684) terminated with exit code 0
+2022-11-18 06:32:43,044 INFO - Launched DagFileProcessorManager with pid: 8225
+2022-11-18 06:32:43,049 INFO - Configured default timezone Timezone('UTC')
+2022-11-18 06:32:43,229 INFO - 1 tasks up for execution:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:32:43,229 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:32:43,230 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Create_Tables manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:32:43,231 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Create_Tables', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 10 and queue default
+2022-11-18 06:32:43,231 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:43,234 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Create_Tables', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:45,081 INFO - Executor reports execution of jobs_analysis.Create_Tables run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:32:45,084 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Create_Tables, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:32:44.534815+00:00, run_end_date=2022-11-18 06:32:44.718490+00:00, run_duration=0.183675, state=success, executor_state=success, try_number=1, max_tries=3, job_id=18, pool=default_pool, queue=default, priority_weight=10, operator=PostgresOperator, queued_dttm=2022-11-18 06:32:43.230293+00:00, queued_by_job_id=1, pid=8228
+2022-11-18 06:32:45,229 INFO - 6 tasks up for execution:
+	<TaskInstance: jobs_analysis.Copy_Jobs_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Company_location_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Job_Ratings_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Job_Sector_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Job_Salaries_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_employees_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:32:45,229 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:32:45,229 INFO - DAG jobs_analysis has 1/16 running and queued tasks
+2022-11-18 06:32:45,229 INFO - DAG jobs_analysis has 2/16 running and queued tasks
+2022-11-18 06:32:45,229 INFO - DAG jobs_analysis has 3/16 running and queued tasks
+2022-11-18 06:32:45,229 INFO - DAG jobs_analysis has 4/16 running and queued tasks
+2022-11-18 06:32:45,229 INFO - DAG jobs_analysis has 5/16 running and queued tasks
+2022-11-18 06:32:45,229 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Copy_Jobs_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Company_location_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Job_Ratings_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Job_Sector_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_Job_Salaries_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Copy_employees_Details manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:32:45,230 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Copy_Jobs_Details', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2022-11-18 06:32:45,231 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Jobs_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:45,231 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Copy_Company_location_Details', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2022-11-18 06:32:45,231 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Company_location_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:45,231 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Copy_Job_Ratings_Details', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2022-11-18 06:32:45,231 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Job_Ratings_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:45,231 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Copy_Job_Sector_Details', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2022-11-18 06:32:45,231 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Job_Sector_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:45,231 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Copy_Job_Salaries_Details', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2022-11-18 06:32:45,231 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Job_Salaries_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:45,231 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Copy_employees_Details', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default
+2022-11-18 06:32:45,231 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_employees_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:32:45,235 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Jobs_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:03,957 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Company_location_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:07,105 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Job_Ratings_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:10,005 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Job_Sector_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:13,388 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_Job_Salaries_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:16,241 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Copy_employees_Details', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:20,200 INFO - Executor reports execution of jobs_analysis.Copy_Jobs_Details run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:20,200 INFO - Executor reports execution of jobs_analysis.Copy_Company_location_Details run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:20,200 INFO - Executor reports execution of jobs_analysis.Copy_Job_Ratings_Details run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:20,200 INFO - Executor reports execution of jobs_analysis.Copy_Job_Sector_Details run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:20,201 INFO - Executor reports execution of jobs_analysis.Copy_Job_Salaries_Details run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:20,201 INFO - Executor reports execution of jobs_analysis.Copy_employees_Details run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:20,204 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Copy_Company_location_Details, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:33:05.258376+00:00, run_end_date=2022-11-18 06:33:06.774865+00:00, run_duration=1.516489, state=success, executor_state=success, try_number=1, max_tries=3, job_id=20, pool=default_pool, queue=default, priority_weight=4, operator=CopyToRedshiftOperator, queued_dttm=2022-11-18 06:32:45.230058+00:00, queued_by_job_id=1, pid=8233
+2022-11-18 06:33:20,205 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Copy_Job_Ratings_Details, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:33:08.396518+00:00, run_end_date=2022-11-18 06:33:09.695107+00:00, run_duration=1.298589, state=success, executor_state=success, try_number=1, max_tries=3, job_id=21, pool=default_pool, queue=default, priority_weight=4, operator=CopyToRedshiftOperator, queued_dttm=2022-11-18 06:32:45.230058+00:00, queued_by_job_id=1, pid=8235
+2022-11-18 06:33:20,205 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Copy_Job_Salaries_Details, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:33:14.687236+00:00, run_end_date=2022-11-18 06:33:15.870277+00:00, run_duration=1.183041, state=success, executor_state=success, try_number=1, max_tries=3, job_id=23, pool=default_pool, queue=default, priority_weight=4, operator=CopyToRedshiftOperator, queued_dttm=2022-11-18 06:32:45.230058+00:00, queued_by_job_id=1, pid=8239
+2022-11-18 06:33:20,205 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Copy_Job_Sector_Details, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:33:11.302910+00:00, run_end_date=2022-11-18 06:33:13.082552+00:00, run_duration=1.779642, state=success, executor_state=success, try_number=1, max_tries=3, job_id=22, pool=default_pool, queue=default, priority_weight=4, operator=CopyToRedshiftOperator, queued_dttm=2022-11-18 06:32:45.230058+00:00, queued_by_job_id=1, pid=8237
+2022-11-18 06:33:20,205 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Copy_Jobs_Details, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:32:46.538796+00:00, run_end_date=2022-11-18 06:33:03.625765+00:00, run_duration=17.086969, state=success, executor_state=success, try_number=1, max_tries=3, job_id=19, pool=default_pool, queue=default, priority_weight=4, operator=CopyToRedshiftOperator, queued_dttm=2022-11-18 06:32:45.230058+00:00, queued_by_job_id=1, pid=8231
+2022-11-18 06:33:20,205 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Copy_employees_Details, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:33:17.561821+00:00, run_end_date=2022-11-18 06:33:19.862000+00:00, run_duration=2.300179, state=success, executor_state=success, try_number=1, max_tries=3, job_id=24, pool=default_pool, queue=default, priority_weight=4, operator=CopyToRedshiftOperator, queued_dttm=2022-11-18 06:32:45.230058+00:00, queued_by_job_id=1, pid=8241
+2022-11-18 06:33:20,366 INFO - 2 tasks up for execution:
+	<TaskInstance: jobs_analysis.Count_and_Null_Test manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Table_Relation_Test manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:33:20,366 INFO - DAG jobs_analysis has 0/16 running and queued tasks
+2022-11-18 06:33:20,366 INFO - DAG jobs_analysis has 1/16 running and queued tasks
+2022-11-18 06:33:20,366 INFO - Setting the following tasks to queued state:
+	<TaskInstance: jobs_analysis.Count_and_Null_Test manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+	<TaskInstance: jobs_analysis.Table_Relation_Test manual__2022-11-18T06:31:37.875994+00:00 [scheduled]>
+2022-11-18 06:33:20,367 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Count_and_Null_Test', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2022-11-18 06:33:20,367 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Count_and_Null_Test', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:20,367 INFO - Sending TaskInstanceKey(dag_id='jobs_analysis', task_id='Table_Relation_Test', run_id='manual__2022-11-18T06:31:37.875994+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2022-11-18 06:33:20,368 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Table_Relation_Test', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:20,371 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Count_and_Null_Test', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:22,269 INFO - Executing command: ['airflow', 'tasks', 'run', 'jobs_analysis', 'Table_Relation_Test', 'manual__2022-11-18T06:31:37.875994+00:00', '--local', '--subdir', 'DAGS_FOLDER/jobs_dag.py']
+2022-11-18 06:33:24,227 INFO - Executor reports execution of jobs_analysis.Count_and_Null_Test run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:24,227 INFO - Executor reports execution of jobs_analysis.Table_Relation_Test run_id=manual__2022-11-18T06:31:37.875994+00:00 exited with status success for try_number 1
+2022-11-18 06:33:24,231 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Count_and_Null_Test, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:33:21.700316+00:00, run_end_date=2022-11-18 06:33:21.960768+00:00, run_duration=0.260452, state=success, executor_state=success, try_number=1, max_tries=3, job_id=25, pool=default_pool, queue=default, priority_weight=2, operator=DataQualityOperator, queued_dttm=2022-11-18 06:33:20.366888+00:00, queued_by_job_id=1, pid=8244
+2022-11-18 06:33:24,231 INFO - TaskInstance Finished: dag_id=jobs_analysis, task_id=Table_Relation_Test, run_id=manual__2022-11-18T06:31:37.875994+00:00, map_index=-1, run_start_date=2022-11-18 06:33:23.574155+00:00, run_end_date=2022-11-18 06:33:23.884399+00:00, run_duration=0.310244, state=success, executor_state=success, try_number=1, max_tries=3, job_id=26, pool=default_pool, queue=default, priority_weight=2, operator=DataQualityOperator, queued_dttm=2022-11-18 06:33:20.366888+00:00, queued_by_job_id=1, pid=8246
+2022-11-18 06:33:24,365 INFO - Marking run <DagRun jobs_analysis @ 2022-11-18 06:31:37.875994+00:00: manual__2022-11-18T06:31:37.875994+00:00, state:running, queued_at: 2022-11-18 06:31:37.884267+00:00. externally triggered: True> successful
+2022-11-18 06:33:24,365 INFO - DagRun Finished: dag_id=jobs_analysis, execution_date=2022-11-18 06:31:37.875994+00:00, run_id=manual__2022-11-18T06:31:37.875994+00:00, run_start_date=2022-11-18 06:31:38.457754+00:00, run_end_date=2022-11-18 06:33:24.365741+00:00, run_duration=105.907987, state=success, external_trigger=True, run_type=manual, data_interval_start=2022-11-17 00:00:00+00:00, data_interval_end=2022-11-18 00:00:00+00:00, dag_hash=cbfff67dd3f678f0f60cc0ccbd48dc90
+2022-11-18 06:33:24,368 INFO - Setting next_dagrun for jobs_analysis to 2022-11-18T00:00:00+00:00, run_after=2022-11-19T00:00:00+00:00
+2022-11-18 06:33:26,232 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:38:26,370 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:43:26,508 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:48:26,648 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:53:26,786 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 06:58:26,923 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:03:27,060 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:08:27,207 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:13:27,340 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:18:27,477 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:23:27,614 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:28:27,752 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:33:27,888 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:38:27,994 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:43:28,093 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:48:28,200 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:53:28,337 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 07:58:28,473 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:03:28,610 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:08:28,747 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:13:28,884 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:18:29,022 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:23:29,116 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:28:29,254 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:33:29,391 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:38:29,528 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:43:29,552 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:48:29,690 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:53:29,828 INFO - Resetting orphaned tasks for active dag runs
+2022-11-18 08:58:29,965 INFO - Resetting orphaned tasks for active dag runs
